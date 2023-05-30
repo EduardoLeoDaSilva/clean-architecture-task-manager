@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.TaskManager.Domain.DomainObjects.ValueObjects
+namespace CleanArchitecture.TaskManager.Domain.DomainObjects.Enums
 {
-    internal class PersonalDocument
+    public enum Priority
     {
+        Low,
+        Medium,
+        High
     }
 }

@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.TaskManag
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.TaskManager.Infrasctructure.Persistance", "CleanArchitecture.TaskManager.Infrasctructure.Data\CleanArchitecture.TaskManager.Infrasctructure.Persistance.csproj", "{3AEDD6A1-7924-458B-923C-D7E722932E51}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.TaskManager.Infrasctructure.Gateway", "CleanArchitecture.TaskManager.Infrasctructure.Gateway\CleanArchitecture.TaskManager.Infrasctructure.Gateway.csproj", "{9DC4E07D-9415-4569-B931-5AC4425DC526}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.TaskManager.Infrasctructure.External", "CleanArchitecture.TaskManager.Infrasctructure.Gateway\CleanArchitecture.TaskManager.Infrasctructure.External.csproj", "{9DC4E07D-9415-4569-B931-5AC4425DC526}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.TaskManager.WebAPI", "CleanArchitecture.TaskManager.WebAPI\CleanArchitecture.TaskManager.WebAPI.csproj", "{0BF7E97F-0E52-4340-BCDF-900119228B89}"
 EndProject

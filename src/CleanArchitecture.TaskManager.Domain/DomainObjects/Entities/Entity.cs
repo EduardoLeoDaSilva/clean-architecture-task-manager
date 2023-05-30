@@ -27,6 +27,6 @@ namespace CleanArchitecture.TaskManager.Domain.Entities
             UpdatedAt = DateTime.Now;
         }
 
-        public abstract void Validate();
+        protected abstract void Validate();
     }
 }

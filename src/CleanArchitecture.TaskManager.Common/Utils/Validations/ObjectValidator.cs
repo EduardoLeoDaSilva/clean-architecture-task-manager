@@ -10,35 +10,35 @@ namespace CleanArchitecture.TaskManager.Common.Utils.Validators
     /// <summary>
     /// Simple object validator based on builder pattern
     /// </summary>
-    public class ObjectValidator
+    public class ObjectValidator<T>
     {
-        private Dictionary<string, (Func<bool> expression, string msg, Exception exception)> Validations;
+        private Dictionary<string, (dynamic @object, Func<T ,bool> expression, string msg, Exception exception)> Validations;
 
 
-        public static ObjectValidator CreateValidator()
+        public static ObjectValidator<T> CreateValidator()
         {
-            return new ObjectValidator();
+            return new ObjectValidator<T>();
         }
 
         private ObjectValidator()
         {
-            Validations = new Dictionary<string, (Func<bool> expression, string msg, Exception exception)>();
+            Validations = new Dictionary<string, (dynamic @object, Func<T, bool> expression, string msg, Exception exception)>();
         }
 
-        public ObjectValidator RuleFor<E>(Func<bool> expression, string message) where E : Exception
+        public ObjectValidator<T> RuleFor<E>(dynamic @object, Func<T, bool> expression, string message) where E : Exception
         {
 
             E Exception = new Exception(message) as E;
-            Validations.Add(expression.Target.ToString(), (expression, message, Exception));
+            Validations.Add(expression.Target.ToString(), (@object, expression, message, Exception));
 
             return this;
         }
 
 
-        public ObjectValidator RuleFor(Func<bool> expression, string message)
+        public ObjectValidator<T> RuleFor(dynamic @object, Func<T,bool> expression, string message)
         {
 
-            Validations.Add(expression.Target.ToString(), (expression, message, null));
+            Validations.Add(expression.Target.ToString(), (@object, expression, message, null));
 
             return this;
         }
@@ -50,7 +50,7 @@ namespace CleanArchitecture.TaskManager.Common.Utils.Validators
 
             foreach (var validator in Validations)
             {
-                var isValid = validator.Value.expression.Invoke();
+                var isValid = validator.Value.expression.Invoke(validator.Value.@object);
                 if (!isValid && validator.Value.exception == null)
                     errors.Add(validator.Value.msg);
 

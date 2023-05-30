@@ -10,4 +10,8 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitecture.TaskManager.Common\CleanArchitecture.TaskManager.Common.csproj" />
+  </ItemGroup>
+
 </Project>

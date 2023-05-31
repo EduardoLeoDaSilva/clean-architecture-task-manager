@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.TaskManager.Domain.Services
+namespace CleanArchitecture.TaskManager.Domain.Repositories
 {
-    internal class UserService
+    public interface ITaskRespository : IBaseRepository<Task>
     {
     }
 }

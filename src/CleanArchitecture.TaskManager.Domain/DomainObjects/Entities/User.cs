@@ -46,6 +46,11 @@ namespace CleanArchitecture.TaskManager.Domain.Entities
             Password = password;
         }
 
+        public void BlurPassword()
+        {
+            this.Password = "*********";
+        }
+
         public void SetEmail(string email)
         {
             var regex = new Regex(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$");

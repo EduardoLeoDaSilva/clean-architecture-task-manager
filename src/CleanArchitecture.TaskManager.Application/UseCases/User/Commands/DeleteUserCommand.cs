@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CleanArchitecture.TaskManager.Common.Communication;
+using CleanArchitecture.TaskManager.Common.Utils.Validators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +8,18 @@ using System.Threading.Tasks;
 
 namespace CleanArchitecture.TaskManager.Application.Commands
 {
-    internal class DeleteUserHandler
+    public class DeleteUserCommand : CommandMessage
     {
+        public override NotificationMessage Validate()
+        {
+           var errors = ObjectValidator<DeleteUserCommand>.CreateValidator()
+                .RuleFor(this, x => x.Id != Guid.Empty, "Id informed is not valid")
+                .Validate();
+
+            if (errors.Any())
+                return NotificationMessage.CreateInvalidNotification(errors.ToArray());
+
+            return NotificationMessage.CreateValidNotification();
+        }
     }
 }

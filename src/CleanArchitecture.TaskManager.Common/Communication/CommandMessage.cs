@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace CleanArchitecture.TaskManager.Common.Communication
 {
-    public class CommandMessage<E> : BaseMessage, IRequest<E>, IValidator
+    public class CommandMessage : BaseMessage, IRequest, IValidator
     {
-        public NotificationMessage Validate()
+        public virtual NotificationMessage Validate()
         {
             throw new NotImplementedException();
         }

@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CleanArchitecture.TaskManager.Application.Commands;
+using MediatR;
 
 namespace CleanArchitecture.TaskManager.Application.UseCases.User
 {
-    internal class UpdateUserHandler
+    public class UpdateUserHandler : IRequestHandler<UpdateUserCommand>
     {
+        public Task Handle(UpdateUserCommand request, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

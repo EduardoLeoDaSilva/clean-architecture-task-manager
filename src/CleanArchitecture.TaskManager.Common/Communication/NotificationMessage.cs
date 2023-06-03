@@ -40,5 +40,13 @@ namespace CleanArchitecture.TaskManager.Common.Communication
             return notification;
 
         }
+
+        public static NotificationMessage CreateInvalidNotification(params string[] error)
+        {
+            var notification = new NotificationMessage();
+            notification.Errors.AddRange(error);
+            return notification;
+
+        }
     }
 }

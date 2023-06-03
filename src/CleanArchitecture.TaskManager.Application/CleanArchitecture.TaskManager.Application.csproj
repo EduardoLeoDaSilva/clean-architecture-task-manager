@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CleanArchitecture.TaskManager.Common\CleanArchitecture.TaskManager.Common.csproj" />
+    <ProjectReference Include="..\CleanArchitecture.TaskManager.Domain\CleanArchitecture.TaskManager.Domain.csproj" />
   </ItemGroup>
 
 </Project>

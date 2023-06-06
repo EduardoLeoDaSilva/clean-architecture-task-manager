@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CleanArchitecture.TaskManager.Domain.Repositories
 {
-    public interface ITaskRespository : IBaseRepository<Task>
+    public interface ITaskRepository : IBaseRepository<Task>
     {
     }
 }

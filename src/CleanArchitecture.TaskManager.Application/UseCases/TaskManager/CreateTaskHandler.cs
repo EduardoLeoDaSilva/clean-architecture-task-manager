@@ -1,4 +1,5 @@
 ﻿using CleanArchitecture.TaskManager.Application.UseCases.TaskManager.Commands;
+using CleanArchitecture.TaskManager.Domain.Repositories;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,13 @@ namespace CleanArchitecture.TaskManager.Application.UseCases.TaskManager
 {
     public class CreateTaskHandler : IRequestHandler<CreateTaskCommand>
     {
+        private readonly ITaskRepository _taskRepository;
+
+        public CreateTaskHandler(ITaskRepository taskRepository)
+        {
+            _taskRepository = taskRepository;
+        }
+
         public Task Handle(CreateTaskCommand request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();

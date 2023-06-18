@@ -18,6 +18,7 @@ namespace CleanArchitecture.TaskManager.Domain.DomainObjects.Entities
         public User Responsible { get; private set; }
         public List<Task> DependecyTaks { get; private set; }
 
+        public Project Project { get; private set; }
         public Task(string name, string description, DateTime dueDate, Priority priority, User responsible)
         {
             Name = name;

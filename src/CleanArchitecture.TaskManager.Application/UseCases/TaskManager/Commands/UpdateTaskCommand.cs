@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 namespace CleanArchitecture.TaskManager.Application.UseCases.TaskManager.Commands
 {
     public class UpdateTaskCommand : CommandMessage
-    {
-        
+    {   
         public override NotificationMessage Validate()
         {
             var errors = ObjectValidator<CreateProjectCommand>.CreateValidator()

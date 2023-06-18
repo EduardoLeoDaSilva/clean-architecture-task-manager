@@ -4,4 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitecture.TaskManager.Application\CleanArchitecture.TaskManager.Application.csproj" />
+  </ItemGroup>
+
 </Project>

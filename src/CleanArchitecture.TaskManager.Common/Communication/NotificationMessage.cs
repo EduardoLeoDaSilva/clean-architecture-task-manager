@@ -14,6 +14,7 @@ namespace CleanArchitecture.TaskManager.Common.Communication
     {
         public string Message { get; private set; }
         public bool Success { get; private set; } = true;
+        public dynamic Data { get; set; }
         public List<string> Errors { get; private set; } = new List<string>();
 
         public void AddErrors(string error)

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CleanArchitecture.TaskManager.Application.DTOs;
+using CleanArchitecture.TaskManager.Application.UseCases.TaskManager.Commands;
 using CleanArchitecture.TaskManager.Domain.DomainObjects.Entities;
 using CleanArchitecture.TaskManager.Domain.Entities;
 using System;
@@ -16,6 +17,9 @@ namespace CleanArchitecture.TaskManager.Application.Mappers
         {
             CreateMap<ProjectDTO, Project>();
             CreateMap<Project, ProjectDTO>();
+            CreateMap<ProjectDTO, CreateProjectCommand>();
+            CreateMap<ProjectDTO, UpdateProjectCommand>();
+
         }
     }
 }
